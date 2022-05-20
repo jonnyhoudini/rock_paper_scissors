@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, request
 from app import app
 from models.player import *
 from models.game import *
@@ -7,8 +7,10 @@ from models.game import *
 def index():
     return render_template('welcome.html')
 
-@app.route('/<choice_A>/<choice_B>')
-def play(choice_A, choice_B):
+@app.route('/game', methods=['POST'])
+def play():
+    choice_A = request.form['1stplayer']
+    choice_B = request.form['2ndplayer']
     player_one = Player("Player 1", choice_A)
     player_two = Player("Player 2", choice_B)
     game = Game(player_one, player_two)

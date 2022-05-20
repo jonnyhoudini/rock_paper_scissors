@@ -5,28 +5,32 @@
 <h2>CHOOSE YOUR WEAPON</h2>
 
 <form action="/game" method="post">
-    <p>Player One</p>
-    <input type="radio" id="rock" name="1stplayer" value="rock">
-    <label for="rock">rock</label>
-    <input type="radio" id="paper" name="1stplayer" value="paper">
-    <label for="paper">paper</label>
-    <input type="radio" id="scissors" name="1stplayer" value="scissors">
-    <label for="scissors">scissors</label>
+    <div class="players">
 
-    <br>
+        <div class="container">
+            <p>Player One</p>
+            <input type="radio" id="rock" name="1stplayer" value="rock">
+            <label for="rock">rock</label>
+            <input type="radio" id="paper" name="1stplayer" value="paper">
+            <label for="paper">paper</label>
+            <input type="radio" id="scissors" name="1stplayer" value="scissors">
+            <label for="scissors">scissors</label>
+        </div>
 
-    <p>Player Two</p>
-    <input type="radio" id="rock" name="2ndplayer" value="rock">
-    <label for="rock">rock</label>
-    <input type="radio" id="paper" name="2ndplayer" value="paper">
-    <label for="paper">paper</label>
-    <input type="radio" id="scissors" name="2ndplayer" value="scissors">
-    <label for="scissors">scissors</label>
 
-    <br>
-    <br>
+        <div class="container">
+            <p>Player Two</p>
+            <input type="radio" id="rock" name="2ndplayer" value="rock">
+            <label for="rock">rock</label>
+            <input type="radio" id="paper" name="2ndplayer" value="paper">
+            <label for="paper">paper</label>
+            <input type="radio" id="scissors" name="2ndplayer" value="scissors">
+            <label for="scissors">scissors</label>
+        </div>
+    </div>
 
-    <input type="submit" value="GO">
+
+    <input type="submit" value="GO" class="button">
 
 </form>
 
