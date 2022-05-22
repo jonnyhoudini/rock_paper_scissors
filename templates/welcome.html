@@ -2,38 +2,64 @@
 
 {% block content %}
 
-<h2>CHOOSE YOUR WEAPON</h2>
+<div id="grid_container">
 
-<form action="/game" method="post">
-    <div class="players">
+    <header id="header">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <h2>CHOOSE YOUR WEAPON</h2>
+    </header>
 
-        <div class="container">
-            <p>Player One</p>
-            <input type="radio" id="rock" name="1stplayer" value="rock">
-            <label for="rock">rock</label>
-            <input type="radio" id="paper" name="1stplayer" value="paper">
-            <label for="paper">paper</label>
-            <input type="radio" id="scissors" name="1stplayer" value="scissors">
-            <label for="scissors">scissors</label>
-        </div>
+    <div class="container" id="player1">
 
+        <form action="/game" method="post">
 
-        <div class="container">
-            <p>Player Two</p>
-            <input type="radio" id="rock" name="2ndplayer" value="rock">
-            <label for="rock">rock</label>
-            <input type="radio" id="paper" name="2ndplayer" value="paper">
-            <label for="paper">paper</label>
-            <input type="radio" id="scissors" name="2ndplayer" value="scissors">
-            <label for="scissors">scissors</label>
-        </div>
+            <p class="heading">Player One</p>
+
+            <label class="radio">ROCK
+                <input type="radio" checked="checked" id="rock" name="1stplayer" value="rock">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="radio">PAPER
+                <input type="radio" id="paper" name="1stplayer" value="paper">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="radio">SCISSORS
+                <input type="radio" id="scissors" name="1stplayer" value="scissors">
+                <span class="checkmark"></span>
+            </label>
+
     </div>
 
 
-    <input type="submit" value="GO" class="button">
+    <div class="container" id="player2">
+        <p class="heading">Player Two</p>
 
-</form>
+        <label class="radio">ROCK
+            <input type="radio" checked="checked" id="rock" name="2ndplayer" value="rock">
+            <span class="checkmark"></span>
+        </label>
+
+        <label class="radio">PAPER
+            <input type="radio" id="paper" name="2ndplayer" value="paper">
+            <span class="checkmark"></span>
+        </label>
+
+        <label class="radio">SCISSORS
+            <input type="radio" id="scissors" name="2ndplayer" value="scissors">
+            <span class="checkmark"></span>
+        </label>
+
+    </div>
 
 
+    <section id="play_buttons">
+        <input type="submit" value="GO" class="button">
+        <!-- <a href="/play" class="machine-button">PLAY MACHINE</a> -->
+    </section>
+    </form>
+
+</div>
 
 {% endblock %}

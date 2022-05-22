@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import render_template, request
 from app import app
 from models.player import *
@@ -17,3 +18,8 @@ def play():
     winner = game.play_game()
     
     return render_template('index.html', player_one=player_one, player_two=player_two, winner=winner)
+
+@app.route('/computer', methods=['POST'])
+def computer():
+    choice_A = request.form['1stplayer']
+    
