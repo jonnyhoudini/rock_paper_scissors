@@ -11,5 +11,22 @@
     <input type="text" id="name" name="name">
     <label for="name">Your name:</label>
 
-    <select name="" id=""></select>
+    <label class="radio">ROCK
+        <input type="radio" checked="checked" id="rock" name="1stplayer" value="rock">
+        <span class="checkmark"></span>
+    </label>
+
+    <label class="radio">PAPER
+        <input type="radio" id="paper" name="1stplayer" value="paper">
+        <span class="checkmark"></span>
+    </label>
+
+    <label class="radio">SCISSORS
+        <input type="radio" id="scissors" name="1stplayer" value="scissors">
+        <span class="checkmark"></span>
+    </label>
+
+    <input type="submit" value="GO" class="button">
 </form>
+
+{% endblock %}

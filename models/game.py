@@ -2,23 +2,23 @@ import random
 
 class Game():
 
-    def __init__(self, player_one, player_two):
-        self.player_one = player_one
-        self.player_two = player_two
+    # def __init__(self, player_one, player_two):
+    #     self.player_one = player_one
+    #     self.player_two = player_two
 
-    def play_game(self):
-            if self.player_one.choice == 'rock' and self.player_two.choice == 'paper':
-                return self.player_two
-            elif self.player_one.choice == 'paper' and self.player_two.choice == 'rock':
-                return self.player_one
-            elif self.player_one.choice == 'scissors' and self.player_two.choice == 'rock':
-                return self.player_two
-            elif self.player_one.choice == 'rock' and self.player_two.choice == 'scissors':
-                return self.player_one
-            elif self.player_one.choice == 'paper' and self.player_two.choice == 'scissors':
-                return self.player_two
-            elif self.player_one.choice == 'scissors' and self.player_two.choice == 'paper':
-                return self.player_one
+    def play_game(self, player_one, player_two):
+            if player_one.choice == 'rock' and player_two.choice == 'paper':
+                return player_two
+            elif player_one.choice == 'paper' and player_two.choice == 'rock':
+                return player_one
+            elif player_one.choice == 'scissors' and player_two.choice == 'rock':
+                return player_two
+            elif player_one.choice == 'rock' and player_two.choice == 'scissors':
+                return player_one
+            elif player_one.choice == 'paper' and player_two.choice == 'scissors':
+                return player_two
+            elif player_one.choice == 'scissors' and player_two.choice == 'paper':
+                return player_one
             else: 
                 return None
 
@@ -32,4 +32,4 @@ class Game():
     def computer_play(self):
         list = ["rock", "paper", "scissors"]
         computer_choice = random.choice(list)
-        print(computer_choice)
+        return computer_choice
